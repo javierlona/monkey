@@ -1,18 +1,3 @@
-.login-screen {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f1F1F1;
-}
-
 /* NAVBAR */
 .navbar {
   background-color: #ffaf00;
@@ -73,9 +58,21 @@
   color: #353639;
 }
 
-
-
 /* LOGIN PAGE */
+.login-screen {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f1F1F1;
+}
 .form-signin {
   width: 100%;
   max-width: 330px;
@@ -114,9 +111,20 @@ header {
   margin-bottom: 15px;
 }
 
+/* BREADCRUMBS */
+.breadcrumb a {
+  /* color: #ffffff; */
+  text-decoration: none;
+}
+
+/* WEBSITE THEME COLORS */
+.main-colors {
+  background-color: #ffaf00 !important;
+  color: #f1f1f1;
+}
+
+
 /* MEDIA QUERIES */
-
-
 @media (max-width: 575px) {
   .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item {
     color: #f1f1f1;
