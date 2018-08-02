@@ -17,7 +17,7 @@
     <link href="./css/style.css" rel="stylesheet">
   </head>
 
-  <body class="text-center">
+  <body class="text-center login-screen">
     <form class="form-signin">
       <img class="mb-4" src="./images/Logo.png" title="Monkedia Logo" alt="Monkedia Logo" width="272" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
