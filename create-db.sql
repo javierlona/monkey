@@ -119,13 +119,13 @@ CREATE TABLE ADMINS (
   hashed_password VARCHAR(255) NOT NULL,
     CONSTRAINT admins_id_pk PRIMARY KEY (admin_id),
 		CONSTRAINT email_uk UNIQUE (email),
-		CONSTRAINT username_uk UNIQUE (username),
+		CONSTRAINT username_uk UNIQUE (username)
 ) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-INSERT INTO admins
+INSERT INTO ADMINS
   VALUES('0', 'Monkey', 'Monkedia', 'mmonkedia@gmail.com', 'monkey', '$2y$10$fHnIaV4PF/M3QwRAdo.70eCt6dXKQvi1LshqNkurfZuHxVoDLHxmC');
 
-ALTER TABLE admins ADD INDEX username_idx (username);
+ALTER TABLE ADMINS ADD INDEX username_idx (username);
 
 
 ALTER DATABASE MONKEDIA CHARACTER SET utf8 COLLATE utf8_general_ci;
