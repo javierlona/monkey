@@ -1,15 +1,13 @@
-console.log("Hello World");
 document.addEventListener('DOMContentLoaded', function() {
 
-  // declare search area items
-  var suggestions = document.getElementById("suggestions");
-  var form = document.getElementById("search-form");
-  var search = document.getElementById("search");
+  // declare search area elements
+  const SUGGESTIONS = document.getElementById("suggestions");
+  const SEARCH = document.getElementById("search");
 
   function suggestions_to_list(items) {
-    var output = '';
-
-    for(i=0; i < items.length; i++) {
+    let output = '';
+    // Loop through each item and add anchor & list tags
+    for(i = 0; i < items.length; i++) {
       output += '<li>';
       output += '<a href="show.php?company_name=' + items[i] + '">';
       output += items[i];
@@ -22,23 +20,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function show_suggestions(json) {
     // Pass JSON to function to convert to HTML
-    var liList = suggestions_to_list(json);
-    suggestions.innerHTML = liList;
-    // Display the dropdown in search form
-    suggestions.style.display = 'block';
+    let liList = suggestions_to_list(json);
+    // Display results in dropdown menu
+    SUGGESTIONS.innerHTML = liList;
+    // Display the dropdown menu in search form
+    SUGGESTIONS.style.display = 'block';
   }
 
   function get_suggestions() {
     // Get search value and assign to q
-    var q = search.value;
+    let q = SEARCH.value;
 
     // Wait until user types 3 characters, then provide suggestions
     if(q.length < 3) {
-      suggestions.style.display = 'none';
+      SUGGESTIONS.style.display = 'none';
       return;
     }
 
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     // call file autosuggest and pass variable q which holds our search term
     xhr.open('GET', 'autosuggest.php?q=' + q, true);
     // submit the request
@@ -46,9 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     xhr.onreadystatechange = function () {
       if(xhr.readyState == 4 && xhr.status == 200) {
-        var result = xhr.responseText;
+        let result = xhr.responseText;
         // get back data as JSON and parse it
-        var json = JSON.parse(result);
+        let json = JSON.parse(result);
         show_suggestions(json);
       }
     };
@@ -56,6 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // use "input" (every key), not "change" (must lose focus)
-  search.addEventListener("input", get_suggestions, false);
+  SEARCH.addEventListener("input", get_suggestions, false);
 
 });
