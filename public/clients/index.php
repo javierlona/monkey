@@ -3,6 +3,8 @@
   $pageTitle = 'Clients';
   include(SHARED_PATH . '/header.php');
 
+  // Query for all clients in DB
+  $clientSet = find_all_clients();
 ?>
   <section>
     <div class="container">
@@ -37,29 +39,18 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <?php while($client = mysqli_fetch_assoc($clientSet)) : ?>
                   <tr>
-                    <td scope="row">1</td>
-                    <td>Mark</td>
+                    <td scope="row"><?php echo htmlspecialchars($client['id']); ?></td>
+                    <td><?php echo htmlspecialchars($client['company_name']); ?></td>
                     <td>
                       <a class="btn btn-outline-warning" href="show.php" role="button">View</a>
                     </td>
                   </tr>
-                  <tr>
-                    <td scope="row">2</td>
-                    <td>Jacob</td>
-                    <td>
-                      <a class="btn btn-outline-warning" href="show.php" role="button">View</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">3</td>
-                    <td>Larry</td>
-                    <td>
-                      <a class="btn btn-outline-warning" href="show.php" role="button">View</a>
-                    </td>
-                  </tr>
+                <?php endwhile; ?>
                 </tbody>
               </table>
+              <?php mysqli_free_result($clientSet); ?>
             </div>
           </div>
         </div>
