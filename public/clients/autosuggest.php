@@ -31,11 +31,11 @@
     $dwnQuery = strtolower($query);
     while($client = mysqli_fetch_assoc($clientSet)) {
       // Downcase both strings for case-insensitive search
-      $dwnChoice = strtolower($client['company_name']);
+      $dwnCompNameChoice = strtolower($client['company_name']);
       // Grab the ID from client
-      $IDChoice = $client['id'];
+      $compIDChoice = $client['id'];
       // Determine if a match via Company Name or ID
-      if(str_contains($dwnChoice, $dwnQuery) || (str_contains($IDChoice, $dwnQuery))) {
+      if(str_contains($dwnCompNameChoice, $dwnQuery) || (str_contains($compIDChoice, $dwnQuery))) {
         // add to array if a match is found
         $matches[] = $client['company_name'];
       }
