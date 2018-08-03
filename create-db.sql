@@ -129,3 +129,5 @@ ALTER TABLE ADMINS ADD INDEX username_idx (username);
 
 
 ALTER DATABASE MONKEDIA CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+SELECT company_name FROM CLIENTS WHERE company_name LIKE 'HAN%';

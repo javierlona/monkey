@@ -22,6 +22,17 @@
   return $client; // Returns an assoc. array of an individual record
 }
 
+  function find_client_by_name() {
+    global $db;
+
+    $sql = "SELECT company_name FROM CLIENTS ";
+    $sql .= "ORDER BY company_name ASC";
+    $result = mysqli_query($db, $sql);
+    confirm_result_set($result);
+    $clients = mysqli_fetch_assoc($result);
+    return $clients;
+  }
+
   function find_admin_by_username($username) {
     global $db;
 
