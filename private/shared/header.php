@@ -12,6 +12,8 @@
   "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="./../css/style.css" rel="stylesheet">
+  <!-- AJAX script -->
+  <script src="./../js/script.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">

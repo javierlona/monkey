@@ -1,8 +1,8 @@
     <footer>
       <p>Copyright Monkedia &copy; 2018</p>
     </footer>
-    <script src="./../js/script.js">
-    </script>
+    <!-- <script src="./../js/script.js">
+    </script> -->
     <script crossorigin="anonymous" integrity=
     "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" src=
     "https://code.jquery.com/jquery-3.2.1.slim.min.js">

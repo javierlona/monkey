@@ -29,7 +29,18 @@
             <div class="card-body">
               <div class="row mb-3">
                 <div class="col-md-12">
-                  <input class="form-control" placeholder="Search Clients..." type="text">
+                  <form id="search-form" action="search.php" class="form-group" method="get">
+                    <?php $q = isset($_GET['q']) ? $_GET['q'] : ''; ?>
+                    <input id="search" class="form-control" name="q" value="<?php echo htmlspecialchars($q); ?>" placeholder="Search Clients..." type="search">
+                    <ul id="suggestions">
+                      <li><a href="search.php?q=alpha">Alpha</a></li>
+                      <li><a href="search.php?q=beta">Beta</a></li>
+                      <li><a href="search.php?q=gamma">Gamma</a></li>
+                      <li><a href="search.php?q=delta">Delta</a></li>
+                    </ul>
+                    <input class="btn main-colors mt-2 btn-block" type="submit" name="" value="Search">
+                  </form>
+
                 </div>
               </div>
               <table class="table table-striped table-hover">
