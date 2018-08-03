@@ -23,7 +23,7 @@
         <div class="col-md-3">
           <div class="list-group">
             <a class="list-group-item list-group-item-action main-colors" href="#">Dashboard</a>
-            <a class="list-group-item list-group-item-action" href="#">Clients</a> <a class=
+            <a class="list-group-item list-group-item-action" href="index.php">Clients</a> <a class=
             "list-group-item list-group-item-action" href="https://www.linkedin.com/in/javierlona/"
             target="_blank">Meet Javier</a>
           </div>
@@ -34,11 +34,6 @@
               Client List
             </div>
             <div class="card-body">
-              <div class="row mb-3">
-                <div class="col-md-12">
-                  <input class="form-control" placeholder="Filter Clients..." type="text">
-                </div>
-              </div>
               <table class="table table-striped table-hover">
                 <thead>
                   <tr>
