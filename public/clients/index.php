@@ -29,9 +29,9 @@
             <div class="card-body">
               <div class="row mb-3">
                 <div class="col-md-12">
-                  <form id="search-form" action="search.php" class="form-group" method="get">
+                  <form id="search-form" action="show.php" class="form-group" method="get">
                     <?php $q = isset($_GET['q']) ? $_GET['q'] : ''; ?>
-                    <input id="search" class="form-control" name="q" value="<?php echo htmlspecialchars($q); ?>" placeholder="Search Clients..." type="search">
+                    <input id="search" class="form-control" name="company_name" value="<?php echo htmlspecialchars($q); ?>" placeholder="Search Clients..." type="search">
                     <ul id="suggestions">
                       <li><a href="search.php?q=alpha">Alpha</a></li>
                       <li><a href="search.php?q=beta">Beta</a></li>
@@ -56,7 +56,7 @@
                     <td scope="row"><?php echo htmlspecialchars($client['id']); ?></td>
                     <td><?php echo htmlspecialchars($client['company_name']); ?></td>
                     <td>
-                      <a class="btn btn-outline-warning" href="<?php echo './show.php?id=' . htmlspecialchars(urlencode($client['id'])); ?>" role="button">View</a>
+                      <a class="btn btn-outline-warning" href="<?php echo './show.php?company_name=' . htmlspecialchars(urlencode($client['company_name'])); ?>" role="button">View</a>
                     </td>
                   </tr>
                 <?php endwhile; ?>

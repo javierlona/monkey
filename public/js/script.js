@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for(i=0; i < items.length; i++) {
       output += '<li>';
-      output += '<a href="search.php?q=' + items[i] + '">';
+      output += '<a href="show.php?company_name=' + items[i] + '">';
       output += items[i];
       output += '</a>';
       output += '</li>';

@@ -8,10 +8,9 @@
      If there is, use it. If not, then use this
      second value as a default instead.
   */
-  $clientID = isset($_GET['id']) ? $_GET['id'] : '1';
-
+  $clientName = isset($_GET['company_name']) ? $_GET['company_name'] : '';
   // Find the specified client
-  $client = find_client_by_id($clientID);
+  $client = find_client_by_name($clientName);
 
 ?>
   <section>
