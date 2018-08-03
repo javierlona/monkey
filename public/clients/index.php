@@ -44,7 +44,7 @@
                     <td scope="row"><?php echo htmlspecialchars($client['id']); ?></td>
                     <td><?php echo htmlspecialchars($client['company_name']); ?></td>
                     <td>
-                      <a class="btn btn-outline-warning" href="show.php" role="button">View</a>
+                      <a class="btn btn-outline-warning" href="<?php echo './show.php?id=' . htmlspecialchars(urlencode($client['id'])); ?>" role="button">View</a>
                     </td>
                   </tr>
                 <?php endwhile; ?>

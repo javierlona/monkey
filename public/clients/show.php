@@ -3,6 +3,13 @@
   $pageTitle = 'Selected Client';
   include(SHARED_PATH . '/header.php');
 
+  /* Check and see if there's a value passed via GET.
+     If there is, use it. If not, then use this
+     second value as a default instead.
+  */
+  $clientID = isset($_GET['id']) ? $_GET['id'] : '1';
+  $client = find_client_by_id($clientID);
+
 ?>
   <section>
     <div class="container">
@@ -14,7 +21,7 @@
           <li class="breadcrumb-item">
             <a href="index.php">Clients</a>
           </li>
-          <li aria-current="page" class="breadcrumb-item active">John Doe</li>
+          <li aria-current="page" class="breadcrumb-item active"><?php echo htmlspecialchars($client['company_name']); ?></li>
         </ol>
       </nav>
     </div>
@@ -38,8 +45,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td scope="row">1</td>
-                    <td>Mark</td>
+                    <td scope="row"><?php echo htmlspecialchars($client['id']); ?></td>
+                    <td><?php echo htmlspecialchars($client['company_name']); ?></td>
                   </tr>
                 </tbody>
               </table>
