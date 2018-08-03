@@ -149,12 +149,13 @@ ul#suggestions li a {
   display: block;
   min-height: 1em;
   padding: 0.5em 10px;
-  background: #CCC;
-  color: #000;
+  background: #e9ecef;
+  color: #353639;
   text-decoration: none;
 }
 ul#suggestions li a:hover {
-  background: #AAA;
+  background: #ffaf00;
+  color: #ffffff;
 }
 
 /* FOOTER */

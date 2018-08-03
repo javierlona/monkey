@@ -4,28 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const SUGGESTIONS = document.getElementById("suggestions");
   const SEARCH = document.getElementById("search");
 
-  function suggestions_to_list(items) {
-    let output = '';
-    // Loop through each item and add anchor & list tags
-    for(i = 0; i < items.length; i++) {
-      output += '<li>';
-      output += '<a href="show.php?company_name=' + items[i] + '">';
-      output += items[i];
-      output += '</a>';
-      output += '</li>';
-    }
-    // Return HTML list items
-    return output;
-  }
-
-  function show_suggestions(json) {
-    // Pass JSON to function to convert to HTML
-    let liList = suggestions_to_list(json);
-    // Display results in dropdown menu
-    SUGGESTIONS.innerHTML = liList;
-    // Display the dropdown menu in search form
-    SUGGESTIONS.style.display = 'block';
-  }
+  // use "input" (every key), not "change" (must lose focus)
+  SEARCH.addEventListener("input", get_suggestions, false);
 
   function get_suggestions() {
     // Get search value and assign to q
@@ -38,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     let xhr = new XMLHttpRequest();
-    // call file autosuggest and pass variable q which holds our search term
+    // Call file autosuggest and pass variable q which holds our search term
     xhr.open('GET', 'autosuggest.php?q=' + q, true);
-    // submit the request
+    // Submit the request
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
     xhr.onreadystatechange = function () {
@@ -54,7 +34,27 @@ document.addEventListener('DOMContentLoaded', function() {
     xhr.send();
   }
 
-  // use "input" (every key), not "change" (must lose focus)
-  SEARCH.addEventListener("input", get_suggestions, false);
+  function show_suggestions(json) {
+    // Pass JSON to function to convert to HTML
+    let liList = suggestions_to_list(json);
+    // Display results in dropdown menu
+    SUGGESTIONS.innerHTML = liList;
+    // Display the dropdown menu in search form
+    SUGGESTIONS.style.display = 'block';
+  }
+
+  function suggestions_to_list(items) {
+    let output = '';
+    // Loop through each item and add anchor & list tags
+    for(i = 0; i < items.length; i++) {
+      output += '<li>';
+      output += '<a href="show.php?company_name=' + items[i] + '">';
+      output += items[i];
+      output += '</a>';
+      output += '</li>';
+    }
+    // Return HTML list items
+    return output;
+  }
 
 });
