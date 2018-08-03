@@ -1,8 +1,11 @@
+<?php
+  isset($pageTitle) ? $pageTitle : '';
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Clients</title>
+  <title>Jungle Area | <?php echo $pageTitle; ?></title>
   <!-- Bootstrap core CSS -->
   <link crossorigin="anonymous" href=
   "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity=
@@ -46,7 +49,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Clients</h1>
+          <h1><?php echo $pageTitle; ?></h1>
         </div>
       </div>
     </div>
