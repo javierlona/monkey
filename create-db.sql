@@ -9,8 +9,6 @@ create table CLIENTS (
 		CONSTRAINT clients_id_uk UNIQUE (id)
 ) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-ALTER DATABASE MONKEDIA CHARACTER SET utf8 COLLATE utf8_general_ci;
-
 insert into CLIENTS (id, company_name) values ('14-9669507', 'Howe, Kuhic and Stoltenberg');
 insert into CLIENTS (id, company_name) values ('39-9771484', 'Klocko, Huel and Rosenbaum');
 insert into CLIENTS (id, company_name) values ('61-1496867', 'Swaniawski, Toy and Schmitt');
@@ -111,3 +109,23 @@ insert into CLIENTS (id, company_name) values ('89-5724198', 'Bogan and Sons');
 insert into CLIENTS (id, company_name) values ('69-8714698', 'Ziemann-Walker');
 insert into CLIENTS (id, company_name) values ('71-5774084', 'Hane Inc');
 insert into CLIENTS (id, company_name) values ('81-9894662', 'Halvorson-Wilderman');
+
+CREATE TABLE ADMINS (
+  admin_id INT(11) NOT NULL AUTO_INCREMENT,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  username VARCHAR(255) NOT NULL,
+  hashed_password VARCHAR(255) NOT NULL,
+    CONSTRAINT admins_id_pk PRIMARY KEY (admin_id),
+		CONSTRAINT email_uk UNIQUE (email),
+		CONSTRAINT username_uk UNIQUE (username),
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+INSERT INTO admins
+  VALUES('0', 'Monkey', 'Monkedia', 'mmonkedia@gmail.com', 'monkey', '$2y$10$fHnIaV4PF/M3QwRAdo.70eCt6dXKQvi1LshqNkurfZuHxVoDLHxmC');
+
+ALTER TABLE admins ADD INDEX username_idx (username);
+
+
+ALTER DATABASE MONKEDIA CHARACTER SET utf8 COLLATE utf8_general_ci;

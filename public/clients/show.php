@@ -8,6 +8,8 @@
      second value as a default instead.
   */
   $clientID = isset($_GET['id']) ? $_GET['id'] : '1';
+
+  // Find the specified client
   $client = find_client_by_id($clientID);
 
 ?>
