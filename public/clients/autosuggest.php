@@ -28,11 +28,14 @@
     $matches = [];
     // Query for all clients in DB
     $clientSet = find_all_clients();
-    $d_query = strtolower($query);
+    $dwnQuery = strtolower($query);
     while($client = mysqli_fetch_assoc($clientSet)) {
       // Downcase both strings for case-insensitive search
-      $d_choice = strtolower($client['company_name']);
-      if(str_contains($d_choice, $d_query)) {
+      $dwnChoice = strtolower($client['company_name']);
+      // Grab the ID from client
+      $IDChoice = $client['id'];
+      // Determine if a match via Company Name or ID
+      if(str_contains($dwnChoice, $dwnQuery) || (str_contains($IDChoice, $dwnQuery))) {
         // add to array if a match is found
         $matches[] = $client['company_name'];
       }
@@ -42,9 +45,9 @@
   // Sort my $matches array
   sort($suggestions);
   // Limit suggestions to 5
-  $max_suggestions = 5;
+  $maxSuggestions = 5;
   // Shorten array to declared max
-  $top_suggestions = array_slice($suggestions, 0, $max_suggestions);
+  $topSuggestions = array_slice($suggestions, 0, $maxSuggestions);
   // Return shortened $matches array as JSON
-  echo json_encode($top_suggestions);
+  echo json_encode($topSuggestions);
 ?>
