@@ -11,21 +11,21 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <!-- <a class="navbar-brand" href="#">Monkedia</a> -->
-              <img class="mb-4" src="./images/Logo.png" title="Monkedia Logo" alt="Monkedia Logo" width="172" height="50">
+        <a class="navbar-brand" href="#"><img class="mb-4" src="./images/Logo.png" title="Monkedia Logo" alt="Monkedia Logo" width="172" height="50"></a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#monkediaNav" aria-controls="monkediaNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="monkediaNav">
           <ul class="navbar-nav mr-auto">
-            <!-- <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li> -->
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="https://www.linkedin.com/in/javierlona/" target="_blank">Meet Javier</a>
             </li>
         </div>
       </div>
@@ -45,9 +45,9 @@
       <div class="container">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <!-- <li class="breadcrumb-item active"><a href="#">Dashboard</a></li> -->
+            <!-- <li class="breadcrumb-item"><a href="#">Clients</a></li> -->
+            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
           </ol>
         </nav>
       </div>
@@ -60,42 +60,44 @@
             <div class="list-group">
               <a href="#" class="list-group-item list-group-item-action main-colors">Dashboard</a>
               <a href="#" class="list-group-item list-group-item-action">Clients</a>
-              <a href="#" class="list-group-item list-group-item-action">Administrators</a>
+              <a href="https://www.linkedin.com/in/javierlona/" target="_blank" class="list-group-item list-group-item-action">Meet Javier</a>
             </div>
           </div>
           <div class="col-md-9">
             <div class="card">
               <div class="card-header main-colors">
-                Featured
+                Client List
               </div>
+
               <div class="card-body">
+                <div class="row mb-3">
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Filter Clients...">
+                  </div>
+                </div>
+
                 <table class="table table-striped table-hover">
                   <thead>
                     <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
+                      <th scope="col">ID #</th>
+                      <th scope="col" colspan="2">Client Name</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <th scope="row">1</th>
                       <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                      <td><a class="btn btn-outline-warning" href="#" role="button">View</a></td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>
                       <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
+                      <td><a class="btn btn-outline-warning" href="#" role="button">View</a></td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
                       <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
+                      <td><a class="btn btn-outline-warning" href="#" role="button">View</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -105,6 +107,10 @@
         </div>
       </div>
     </section>
+
+    <footer>
+      <p>Copyright Monkedia &copy; 2018</p>
+    </footer>
 
 
     <script src="./js/script.js"></script>
