@@ -1,5 +1,6 @@
 <?php
   require_once('../../private/initialize.php');
+  require_login();
   $pageTitle = 'Clients';
   include(SHARED_PATH . '/header.php');
 
@@ -28,7 +29,7 @@
             <div class="card-body">
               <div class="row mb-3">
                 <div class="col-md-12">
-                  <input class="form-control" placeholder="Filter Clients..." type="text">
+                  <input class="form-control" placeholder="Search Clients..." type="text">
                 </div>
               </div>
               <table class="table table-striped table-hover">

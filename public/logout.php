@@ -1,6 +1,6 @@
 <?php
 require_once('../private/initialize.php');
 log_out_admin();
-header("Location: ./login.php");
+header("Location: " . WWW_ROOT . "/login.php");
 
 ?>

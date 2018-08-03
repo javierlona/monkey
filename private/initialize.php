@@ -10,9 +10,17 @@
   define("PUBLIC_PATH", PROJECT_PATH . '/public');
   define("SHARED_PATH", PRIVATE_PATH . '/shared');
 
+  // Assign the root URL to a PHP constant
+  // * Do not need to include the domain
+  // * Use same document root as webserver
+  // * Can set a hardcoded value:
+  // define("WWW_ROOT", '/monkedia/public');
+  // define("WWW_ROOT", '');
+  # WWW_ROOT is the root of the entire website
+  define("WWW_ROOT", '/monkedia/public');
+
   require_once('database.php');
   require_once('query_functions.php');
-  // require_once('validation_functions.php');
   require_once('auth_functions.php');
 
   //  $db is going TO connect and to make queries on from here on.

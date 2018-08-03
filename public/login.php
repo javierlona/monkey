@@ -14,6 +14,7 @@
     // Security through obscurity
     $login_failure_msg = '<div class="alert alert-danger">Incorrect Username or Password.</div>';
 
+    // Query DB for user
     $admin = find_admin_by_username($username);
 
     // If you get back a record
@@ -22,7 +23,7 @@
       if(password_verify($password, $admin['hashed_password'])) {
         // password matches
         log_in_admin($admin);
-        header("Location: ./clients");
+        header("Location: " . WWW_ROOT . "/clients");
       } else {
         // username found, but password does not match
         $errorLogin = $login_failure_msg;

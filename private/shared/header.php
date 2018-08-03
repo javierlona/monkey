@@ -36,10 +36,10 @@
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Welcome, monkey</a>
+            <a class="nav-link" href="#">Welcome, <?php echo $_SESSION['username']; ?></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-link" href="<?php echo WWW_ROOT . '/logout.php'; ?>">Logout</a>
           </li>
         </ul>
       </div>

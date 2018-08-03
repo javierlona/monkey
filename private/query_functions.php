@@ -27,10 +27,10 @@
 
     $sql = "SELECT * FROM ADMINS ";
     $sql .= "WHERE username='" . mysqli_real_escape_string($db, $username) . "' ";
-    $sql .= "LIMIT 1";
+    $sql .= "LIMIT 1"; // should only return the first & only instance
     $result = mysqli_query($db, $sql);
     confirm_result_set($result);
-    $admin = mysqli_fetch_assoc($result); // find first
+    $admin = mysqli_fetch_assoc($result);
     mysqli_free_result($result);
     return $admin; // returns an assoc. array
   }
