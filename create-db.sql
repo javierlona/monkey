@@ -127,5 +127,7 @@ INSERT INTO ADMINS
 
 ALTER TABLE ADMINS ADD INDEX username_idx (username);
 
-
 ALTER DATABASE MONKEDIA CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+CREATE USER 'monkey'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON MONKEDIA.* TO 'monkey'@'localhost';
