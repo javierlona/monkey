@@ -6,14 +6,15 @@
 <head>
   <meta charset="utf-8">
   <title>Jungle Area | <?php echo $pageTitle; ?></title>
+  <link rel="icon" href="<?php echo WWW_ROOT . "/images/favicon.ico"; ?>">
   <!-- Bootstrap core CSS -->
   <link crossorigin="anonymous" href=
   "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity=
   "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="./../css/style.css" rel="stylesheet">
+  <link href="<?php echo WWW_ROOT . "/css/style.css"; ?>" rel="stylesheet">
   <!-- AJAX script -->
-  <script src="./../js/script.js"></script>
+  <script src="<?php echo WWW_ROOT . "/js/script.js"; ?>"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">

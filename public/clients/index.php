@@ -21,7 +21,7 @@
     <div class="container">
       <div class="row">
         <?php include(SHARED_PATH . '/sidebar.php'); ?>
-        <div class="col-md-9">
+        <div class="col-md-9 mb-5">
           <div class="card">
             <div class="card-header main-colors">
               Client List
