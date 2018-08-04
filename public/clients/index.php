@@ -32,7 +32,7 @@
                   <form id="search-form" action="show.php" class="form-group" method="get">
                     <?php $q = isset($_GET['q']) ? $_GET['q'] : ''; ?>
                     <input id="search" class="form-control" name="company_name" value="<?php echo htmlspecialchars($q); ?>" placeholder="Search Clients..." type="search" autofocus>
-                    <ul id="suggestions">
+                    <ul id="suggestions" class="suggestions-ajax">
                       <!-- AJAX results are shown here -->
                     </ul>
                     <input class="btn main-colors mt-2 btn-block" type="submit" name="" value="Search">

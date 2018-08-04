@@ -14,7 +14,7 @@
     global $db;
 
     $sql = "SELECT * FROM CLIENTS ";
-    $sql .= "WHERE company_name='" . $clientName . "'";
+    $sql .= "WHERE company_name='" . mysqli_real_escape_string($db, $clientName) . "' ";
     $sql .= "LIMIT 1"; // should only return the first & only instance
     $result = mysqli_query($db, $sql);
     confirm_result_set($result);
