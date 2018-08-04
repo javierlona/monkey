@@ -1,5 +1,23 @@
-rgb(255, 175, 0); //#FFAF00
+##Live Demo
+Click for [Live Demo](http://onegreatapp.com/monkedia/public)
 
-rgb(38, 39, 39); // #262727
-rgb(241, 241, 241); //#F1F1F1
-rgb(53, 54, 57); //#353639
+Username: monkey
+
+Password: bananas
+
+##Description
+Web application with authorization that allows the end user to access/search a list of clients by ID and Company Name.
+
+##Installation
+Use the **create-db.sql** to create the database and tables. The file contains dummy data.
+Inside the private directory populate the **db_credentials.php** with your database credentials.
+```PHP
+<?php
+  define("HOST", "localhost");
+  define("USERNAME", "");
+  define("PASSWORD", "");
+  define("DB_NAME", "MONKEDIA");
+?>
+```
+##Technologies
+AJAX Search Autosuggest, PHP, MySQL, Bootstrap 4, Vanilla JavaScript

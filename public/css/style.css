@@ -34,6 +34,15 @@ body {
   background-color: #ffaf00;
 }
 
+/* HEADER */
+header {
+  background: #333333;
+  color:#ffffff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  padding-top: 15px;
+}
+
 /* LOGIN PAGE */
 .login-screen {
   display: -ms-flexbox;
@@ -77,15 +86,6 @@ body {
   border-top-right-radius: 0;
 }
 
-/* HEADER */
-header {
-  background: #333333;
-  color:#ffffff;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-  padding-top: 15px;
-}
-
 /* BREADCRUMBS */
 .breadcrumb a {
   color: #353639;
@@ -94,7 +94,7 @@ header {
 
 /* WEBSITE THEME COLORS */
 .main-colors {
-  background-color: #ffaf00 !important;
+  background-color: #ffaf00;
   color: #f1f1f1;
 }
 
