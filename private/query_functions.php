@@ -10,19 +10,6 @@
     return $result;
   }
 
-  function find_client_by_id($clientID) {
-    global $db;
-
-    $sql = "SELECT * FROM CLIENTS ";
-    $sql .= "WHERE id='" . $clientID . "'";
-    $sql .= "LIMIT 1"; // should only return the first & only instance
-    $result = mysqli_query($db, $sql);
-    confirm_result_set($result);
-    $client = mysqli_fetch_assoc($result);
-    mysqli_free_result($result);
-    return $client; // Returns an assoc. array of an individual record
-  }
-
   function find_client_by_name($clientName) {
     global $db;
 

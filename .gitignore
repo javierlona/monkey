@@ -1,3 +1,5 @@
 # db_credentials file
 /private/db_credentials.php
 /public/passgen.php
+/public/clients/all-clients.php
+/public/clients/spinner.gif
