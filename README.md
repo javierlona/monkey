@@ -1,17 +1,17 @@
-##Live Demo
+## Live Demo
 Click for [Live Demo](http://onegreatapp.com/monkedia/public)
 
 Username: monkey
 
 Password: bananas
 
-##Description
+## Description
 Web application with authorization that allows the end user to access/search a list of clients by ID and Company Name.
 
-##Installation
+## Installation
 Use the **create-db.sql** to create the database and tables. The file contains dummy data.
 Inside the private directory populate the **db_credentials.php** with your database credentials.
-However, the file **create-db.sql** creates a MySQL user named 'monkey' with access to the application database 'MONKEDIA'. 
+However, the file **create-db.sql** creates a MySQL user named 'monkey' with access to the application database 'MONKEDIA'.
 ```PHP
 <?php
   define("HOST", "localhost");
@@ -20,5 +20,5 @@ However, the file **create-db.sql** creates a MySQL user named 'monkey' with acc
   define("DB_NAME", "MONKEDIA");
 ?>
 ```
-##Technologies
+## Technologies
 AJAX Search Autosuggest, PHP, MySQL, Bootstrap 4, Vanilla JavaScript
