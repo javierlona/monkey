@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  // declare search area elements
+  // Declare search area elements
   const SUGGESTIONS = document.getElementById("suggestions");
   const SEARCH = document.getElementById("search");
 
-  // use "input" (every key), not "change" (must lose focus)
+  // Use "input" (every key), not "change" (must lose focus)
   SEARCH.addEventListener("input", get_suggestions, false);
 
   function get_suggestions() {

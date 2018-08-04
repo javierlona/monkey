@@ -20,7 +20,7 @@
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
       <a class="navbar-brand" href="#"><img alt="Monkedia Logo" class="mb-4" height="50" src=
-      "./../images/Logo.png" title="Monkedia Logo" width="172"></a> <button aria-controls=
+      "<?php echo WWW_ROOT . "/images/Logo.png" ?>" title="Monkedia Logo" width="172"></a> <button aria-controls=
       "monkediaNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
       data-target="#monkediaNav" data-toggle="collapse" type="button"><span class=
       "navbar-toggler-icon"></span></button>

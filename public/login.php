@@ -21,8 +21,9 @@
     if($admin) {
 
       if(password_verify($password, $admin['hashed_password'])) {
-        // password matches
+        // Password matches
         log_in_admin($admin);
+        // Redirect to client page
         header("Location: " . WWW_ROOT . "/clients");
       } else {
         // username found, but password does not match
@@ -41,7 +42,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="./images/favicon.ico">
+    <link rel="icon" href="<?php echo WWW_ROOT . "/images/favicon.ico"; ?>">
 
     <title>Sign In to the Jungle</title>
 
@@ -49,14 +50,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="./css/style.css" rel="stylesheet">
+    <link href="<?php echo WWW_ROOT . "/css/style.css"; ?>" rel="stylesheet">
   </head>
 
   <body class="text-center login-screen">
     <div class="card">
       <div class="card-body">
         <form class="form-signin" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-          <img class="mb-4" src="./images/Logo.png" title="Monkedia Logo" alt="Monkedia Logo" width="300" height="72">
+          <img class="mb-4" src="<?php echo WWW_ROOT . "/images/Logo.png"; ?>" title="Monkedia Logo" alt="Monkedia Logo" width="300" height="72">
           <?php echo (isset($errorLogin)) ? $errorLogin : ''; ?>
           <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
           <label for="inputUsername" class="sr-only">Username</label>

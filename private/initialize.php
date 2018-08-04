@@ -23,6 +23,6 @@
   require_once('query_functions.php');
   require_once('auth_functions.php');
 
-  //  $db is going TO connect and to make queries on from here on.
+  //  $db is going to connect make queries on from here on.
   $db = db_connect();
 ?>

@@ -2,7 +2,7 @@
   require_once('../../private/initialize.php');
   require_login();
 
-  // check if its an AJAX request
+  // Check if its an AJAX request
   function is_ajax_request() {
     return isset($_SERVER['HTTP_X_REQUESTED_WITH']) &&
       $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest';
@@ -12,9 +12,8 @@
     exit;
   }
 
-  // Notes:
   // * strpos is faster than strstr or preg_match
-  // make suggestions if the string is anywhere in the name
+  // Make suggestions if the string is anywhere in the name
   function str_contains($choice, $query) {
     return strpos($choice, $query) !== false;
   }

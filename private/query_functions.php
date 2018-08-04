@@ -33,7 +33,7 @@
     confirm_result_set($result);
     $admin = mysqli_fetch_assoc($result);
     mysqli_free_result($result);
-    return $admin; // returns an assoc. array
+    return $admin; // returns an assoc. array of an individual record
   }
 
 ?>
