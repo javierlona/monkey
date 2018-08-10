@@ -30,8 +30,7 @@
               <div class="row mb-3">
                 <div class="col-md-12">
                   <form id="search-form" action="show.php" class="form-group" method="get">
-                    <?php $q = isset($_GET['q']) ? $_GET['q'] : ''; ?>
-                    <input id="search" class="form-control" name="company_name" value="<?php echo htmlspecialchars($q); ?>" placeholder="Search Clients..." type="search" autofocus>
+                    <input id="search" class="form-control" name="company_name" value="" placeholder="Search Clients..." type="search" autofocus>
                     <ul id="suggestions" class="suggestions-ajax">
                       <!-- AJAX results are shown here -->
                     </ul>

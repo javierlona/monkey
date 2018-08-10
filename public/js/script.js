@@ -25,8 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     xhr.onreadystatechange = function () {
       if(xhr.readyState == 4 && xhr.status == 200) {
+        // Data dump of the results gathered from autosuggest.php
+        // Get back results as a JSON string array
         let result = xhr.responseText;
-        // get back data as JSON and parse it
+        // Convert JSON string array to a JS object
         let json = JSON.parse(result);
         show_suggestions(json);
       }
@@ -35,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function show_suggestions(json) {
-    // Pass JSON to function to convert to HTML
+    // Pass JS object to function to convert to HTML
     let liList = suggestions_to_list(json);
     // Display results in dropdown menu
     SUGGESTIONS.innerHTML = liList;
@@ -45,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function suggestions_to_list(items) {
     let output = '';
-    // Loop through each item and add anchor & list tags
+    // Loop through each item company name and add anchor & list tags
     for(i = 0; i < items.length; i++) {
       output += '<li>';
       output += '<a href="show.php?company_name=' + items[i] + '">';
