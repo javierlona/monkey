@@ -22,26 +22,28 @@
     }
   }
 
-  // Test if query succeded
-  function confirm_result_set($result_set) {
-    if (!$result_set) {
-    	exit("Database query failed.");
-    }
-  }
-
   function check_prepare($stmt) {
     if(!$stmt) {
       die("Prepare failed: (" . mysqli_connect_errno() .")" . mysqli_connect_error());
-    } else {
-      echo "<h1>Good</h1>";
     }
   }
 
   function check_param($bindParam) {
     if(!$bindParam) {
       echo "Binding failed: (" . mysqli_connect_errno() . ") " . mysqli_connect_error();
-    } else {
-      echo "<h1>Good 2</h1>";
+    }
+  }
+
+  function check_execute($executeResult) {
+    if(!$executeResult) {
+      echo "Execute failed: (" . mysqli_connect_errno() . ") " . mysqli_connect_error();
+    }
+  }
+
+  // Test if query succeded
+  function confirm_result_set($result_set) {
+    if (!$result_set) {
+    	exit("Database query failed.");
     }
   }
 

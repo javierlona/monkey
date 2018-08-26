@@ -30,8 +30,13 @@
     check_prepare($stmt);
     $bindParam = mysqli_stmt_bind_param($stmt, 's', $clientName);
     check_param($bindParam);
-    $execute_result = mysqli_stmt_execute($stmt);
-    check_execute($execute_result);
+    $executeResult = mysqli_stmt_execute($stmt);
+    check_execute($executeResult);
+    $result = mysqli_stmt_get_result($stmt);
+    confirm_result_set($result);
+    $client = mysqli_fetch_assoc($result);
+    mysqli_free_result($result);
+    return $client; // Returns an assoc. array of an individual record
   }
 
   function find_admin_by_username($username) {
