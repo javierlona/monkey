@@ -10,17 +10,22 @@
     return $result;
   }
 
+  // function find_client_by_name($clientName) {
+  //   global $db;
+
+  //   $sql = "SELECT * FROM CLIENTS ";
+  //   $sql .= "WHERE company_name='" . mysqli_real_escape_string($db, $clientName) . "' ";
+  //   $sql .= "LIMIT 1"; // should only return the first & only instance
+  //   $result = mysqli_query($db, $sql);
+  //   confirm_result_set($result);
+  //   $client = mysqli_fetch_assoc($result);
+  //   mysqli_free_result($result);
+  //   return $client; // Returns an assoc. array of an individual record
+  // }
+
   function find_client_by_name($clientName) {
     global $db;
-
-    $sql = "SELECT * FROM CLIENTS ";
-    $sql .= "WHERE company_name='" . mysqli_real_escape_string($db, $clientName) . "' ";
-    $sql .= "LIMIT 1"; // should only return the first & only instance
-    $result = mysqli_query($db, $sql);
-    confirm_result_set($result);
-    $client = mysqli_fetch_assoc($result);
-    mysqli_free_result($result);
-    return $client; // Returns an assoc. array of an individual record
+    $sql = "SELECT * FROM CLIENTS WHERE company_name = ? LIMIT 1";
   }
 
   function find_admin_by_username($username) {
