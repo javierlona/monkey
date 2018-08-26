@@ -41,8 +41,8 @@
   }
 
   // Test if query succeded
-  function confirm_result_set($result_set) {
-    if (!$result_set) {
+  function confirm_result_set($resultSet) {
+    if (!$resultSet) {
     	exit("Database query failed.");
     }
   }
