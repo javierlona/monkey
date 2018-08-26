@@ -26,6 +26,12 @@
   function find_client_by_name($clientName) {
     global $db;
     $sql = "SELECT * FROM CLIENTS WHERE company_name = ? LIMIT 1";
+    $stmt = mysqli_prepare($db, $sql);
+    check_prepare($stmt);
+    $bindParam = mysqli_stmt_bind_param($stmt, 's', $clientName);
+    check_param($bindParam);
+    $execute_result = mysqli_stmt_execute($stmt);
+    check_execute($execute_result);
   }
 
   function find_admin_by_username($username) {
