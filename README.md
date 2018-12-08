@@ -1,5 +1,5 @@
 ## Live Demo
-Click for [Live Demo](http://onegreatapp.com/monkedia/public)
+Click for [Live Demo](http://apps.javierlona.com/monkedia/public)
 
 Username: monkey
 

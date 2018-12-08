@@ -1,0 +1,3 @@
+RedirectMatch ^/monkedia/?$ /monkedia/public/
+RedirectMatch ^/monkedia/private/?$ /monkedia/public/
+RedirectMatch ^/monkedia/private/shared/?$ /monkedia/public/
